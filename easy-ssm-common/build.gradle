@@ -2,13 +2,78 @@ group 'com.xhyan'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'org.flywaydb.flyway'
 
-sourceCompatibility = 1.5
+//配置插件仓库
+buildscript {
+    repositories {
+        mavenCentral()
+    }
 
-repositories {
-    mavenCentral()
+    dependencies {
+        classpath: 'mysql:mysql-connector-java:5.1.36'
+        classpath 'org.flywaydb:flyway-gradle-plugin:4.0'
+    }
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+def getDbProperties = {
+    def properties = new Properties()
+    def dbPropertiesPath = sourceSets.main.resources.srcDirs[0].path;
+    file("$dbPropertiesPath/jdbc-mysql.properties").withInputStream { inputStream ->
+        properties.load(inputStream)
+    }
+
+    properties;
+
+}
+
+flyway {
+    def prop = getDbProperties()
+    user = prop.getProperty('jdbc.user')
+    url = prop.getProperty('jdbc.url')
+    password = prop.getProperty('jdbc.pass')
+//    locations = ["filesystem:db/migration"]
+
+}
+
+configurations {
+    mybatisGenerator
+}
+
+// mybatis生成基本对象的任务
+task mybatisGenerate << {
+    def prop = getDbProperties()
+
+    ant.properties['targetProject'] = projectDir.path
+    ant.properties['driverClass'] = prop.getProperty('jdbc.driver')
+    ant.properties['connectionURL'] = prop.getProperty('jdbc.url')
+    ant.properties['userId'] = prop.getProperty('jdbc.username')
+    ant.properties['password'] = prop.getProperty('jdbc.password')
+    ant.properties['src_main_java'] = sourceSets.main.java.srcDirs[0].path
+    ant.properties['src_main_resources'] = sourceSets.main.resources.srcDirs[0].path
+    ant.properties['modelPackage'] = this.modelPackage
+    ant.properties['mapperPackage'] = this.mapperPackage
+    ant.properties['sqlMapperPackage'] = this.sqlMapperPackage
+
+    ant.taskdef(
+            name: 'mbgenerator',
+            classname: 'org.mybatis.generator.ant.GeneratorAntTask',
+            classpath: configurations.mybatisGenerator.asPath
+    )
+    ant.mbgenerator(overwrite: true,
+            configfile: 'db/generatorConfig.xml', verbose: true) {
+        propertyset {
+            propertyref(name: 'targetProject')
+            propertyref(name: 'userId')
+            propertyref(name: 'driverClass')
+            propertyref(name: 'connectionURL')
+            propertyref(name: 'password')
+            propertyref(name: 'src_main_java')
+            propertyref(name: 'src_main_resources')
+            propertyref(name: 'modelPackage')
+            propertyref(name: 'mapperPackage')
+            propertyref(name: 'sqlMapperPackage')
+
+        }
+    }
 }

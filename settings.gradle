@@ -1,0 +1,6 @@
+rootProject.name = 'easy-ssm'
+include 'easy-ssm-boos'
+include 'easy-ssm-common'
+include 'easy-ssm-core'
+include 'easy-ssm-portal'
+

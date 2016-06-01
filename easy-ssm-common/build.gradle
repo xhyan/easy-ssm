@@ -50,15 +50,15 @@ dependencies {
 sourceSets {
     main {
         resources {
-            srcDir("src/main/resources")
+            srcDir("src/main")
         }
     }
 }
 
 def getDbProperties = {
     def properties = new Properties()
-    def dbPropertiesPath = sourceSets.main.resources.srcDirs[0].path;
-    file("$dbPropertiesPath/jdbc-mysql.properties").withInputStream { inputStream ->
+//    def dbPropertiesPath = sourceSets.main.resources.srcDirs[0].path;
+    file("src/main/resources/config/jdbc-mysql.properties").withInputStream { inputStream ->
         properties.load(inputStream)
     }
 
@@ -68,10 +68,10 @@ def getDbProperties = {
 
 flyway {
     def prop = getDbProperties()
-    user = prop.getProperty('jdbc.user')
+    user = prop.getProperty('jdbc.username')
     url = prop.getProperty('jdbc.url')
-    password = prop.getProperty('jdbc.pass')
-//    locations = ["filesystem:db/migration"]
+    password = prop.getProperty('jdbc.password')
+    locations = ["filesystem:db/pay.sql"]
 
 }
 
@@ -98,7 +98,7 @@ task mybatisGenerate << {
             classpath: configurations.mybatisGenerator.asPath
     )
     ant.mbgenerator(overwrite: true,
-            configfile: 'db/generatorConfig.xml', verbose: true) {
+            configfile: 'src/main/resources/db/generatorConfig.xml', verbose: true) {
         propertyset {
             propertyref(name: 'targetProject')
             propertyref(name: 'userId')

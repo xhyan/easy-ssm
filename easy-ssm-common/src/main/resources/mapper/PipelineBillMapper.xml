@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xhyan.zero.common.mapper.PipelineBillMapper" >
+  <resultMap id="BaseResultMap" type="com.xhyan.zero.common.domain.PipelineBill" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="account_id" property="accountId" jdbcType="BIGINT" />
+    <result column="channel_account" property="channelAccount" jdbcType="VARCHAR" />
+    <result column="channel_id" property="channelId" jdbcType="BIGINT" />
+    <result column="pipeline_id" property="pipelineId" jdbcType="BIGINT" />
+    <result column="occurred_partner_id" property="occurredPartnerId" jdbcType="BIGINT" />
+    <result column="biz_num" property="bizNum" jdbcType="BIGINT" />
+    <result column="biz_type" property="bizType" jdbcType="BIGINT" />
+    <result column="type" property="type" jdbcType="TINYINT" />
+    <result column="channel_sn" property="channelSn" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="BIGINT" />
+    <result column="trade_date" property="tradeDate" jdbcType="DATE" />
+    <result column="settle_date" property="settleDate" jdbcType="DATE" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="memo" property="memo" jdbcType="VARCHAR" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="gmt_modify" property="gmtModify" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

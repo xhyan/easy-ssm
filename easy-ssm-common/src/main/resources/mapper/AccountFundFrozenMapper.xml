@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xhyan.zero.common.mapper.AccountFundFrozenMapper" >
+  <resultMap id="BaseResultMap" type="com.xhyan.zero.common.domain.AccountFundFrozen" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="account_id" property="accountId" jdbcType="BIGINT" />
+    <result column="biz_num" property="bizNum" jdbcType="BIGINT" />
+    <result column="biz_type" property="bizType" jdbcType="TINYINT" />
+    <result column="amount" property="amount" jdbcType="BIGINT" />
+    <result column="credit_amount" property="creditAmount" jdbcType="BIGINT" />
+    <result column="freeze_status" property="freezeStatus" jdbcType="TINYINT" />
+    <result column="freeze_date" property="freezeDate" jdbcType="TIMESTAMP" />
+    <result column="unfreeze_date" property="unfreezeDate" jdbcType="TIMESTAMP" />
+    <result column="freeze_trade_date" property="freezeTradeDate" jdbcType="DATE" />
+    <result column="unfreeze_trade_date" property="unfreezeTradeDate" jdbcType="DATE" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="gmt_modify" property="gmtModify" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

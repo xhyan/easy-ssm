@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xhyan.zero.common.mapper.CruAccountMapper" >
+  <resultMap id="BaseResultMap" type="com.xhyan.zero.common.domain.CruAccount" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="account_id" property="accountId" jdbcType="BIGINT" />
+    <result column="amount" property="amount" jdbcType="BIGINT" />
+    <result column="limit_feature" property="limitFeature" jdbcType="INTEGER" />
+    <result column="limit_time" property="limitTime" jdbcType="INTEGER" />
+    <result column="limit_unit" property="limitUnit" jdbcType="INTEGER" />
+    <result column="limit_reason" property="limitReason" jdbcType="INTEGER" />
+    <result column="descr" property="descr" jdbcType="VARCHAR" />
+    <result column="notify_type" property="notifyType" jdbcType="VARCHAR" />
+    <result column="op_user_id" property="opUserId" jdbcType="BIGINT" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="relieve_user_id" property="relieveUserId" jdbcType="BIGINT" />
+    <result column="relieve_time" property="relieveTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

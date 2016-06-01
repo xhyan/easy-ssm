@@ -18,7 +18,7 @@
                 <value>classpath:mapper/*.xml</value>
             </list>
         </property>
-        <property name="typeAliasesPackage" value="com.github.ichenkaihua.model"/>
+        <property name="typeAliasesPackage" value="com.xhyan.zero.common.domain"/>
         <property name="plugins">
             <list>
                 <bean class="com.github.pagehelper.PageHelper">
@@ -58,7 +58,7 @@
 
     <aop:config>
         <aop:pointcut id="appService"
-                      expression="execution(* com.xhyan.zero.service..*Service*.*(..))" />
+                      expression="execution(* com.xhyan.zero.common.mapper.*Dao*.*(..))" />
         <aop:advisor advice-ref="txAdvice" pointcut-ref="appService" />
     </aop:config>
 

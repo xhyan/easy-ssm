@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xhyan.zero.common.mapper.TransferMapper" >
+  <resultMap id="BaseResultMap" type="com.xhyan.zero.common.domain.Transfer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="src_account_id" property="srcAccountId" jdbcType="BIGINT" />
+    <result column="des_account_id" property="desAccountId" jdbcType="BIGINT" />
+    <result column="out_biz_no" property="outBizNo" jdbcType="VARCHAR" />
+    <result column="occurred_partner_id" property="occurredPartnerId" jdbcType="BIGINT" />
+    <result column="amount" property="amount" jdbcType="BIGINT" />
+    <result column="notify_url" property="notifyUrl" jdbcType="VARCHAR" />
+    <result column="trade_date" property="tradeDate" jdbcType="DATE" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="gmt_modify" property="gmtModify" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

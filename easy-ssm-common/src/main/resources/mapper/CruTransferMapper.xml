@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xhyan.zero.common.mapper.CruTransferMapper" >
+  <resultMap id="BaseResultMap" type="com.xhyan.zero.common.domain.CruTransfer" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="transfer_type" property="transferType" jdbcType="INTEGER" />
+    <result column="account_type" property="accountType" jdbcType="INTEGER" />
+    <result column="daily_amount" property="dailyAmount" jdbcType="BIGINT" />
+    <result column="daily_free_amount" property="dailyFreeAmount" jdbcType="BIGINT" />
+    <result column="each_min_amount" property="eachMinAmount" jdbcType="BIGINT" />
+    <result column="each_min_fee" property="eachMinFee" jdbcType="BIGINT" />
+    <result column="each_max_fee" property="eachMaxFee" jdbcType="BIGINT" />
+    <result column="fee_percent" property="feePercent" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

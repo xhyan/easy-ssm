@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xhyan.zero.common.mapper.TradeRefundDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.xhyan.zero.common.domain.TradeRefundDetail" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="trade_id" property="tradeId" jdbcType="BIGINT" />
+    <result column="pament_id" property="pamentId" jdbcType="BIGINT" />
+    <result column="refund_id" property="refundId" jdbcType="BIGINT" />
+    <result column="refund_account_id" property="refundAccountId" jdbcType="BIGINT" />
+    <result column="refund_name" property="refundName" jdbcType="VARCHAR" />
+    <result column="refund_amount" property="refundAmount" jdbcType="BIGINT" />
+    <result column="refund_channel_id" property="refundChannelId" jdbcType="BIGINT" />
+    <result column="refund_channel_name" property="refundChannelName" jdbcType="VARCHAR" />
+    <result column="refund_pipeline_id" property="refundPipelineId" jdbcType="BIGINT" />
+    <result column="refund_status" property="refundStatus" jdbcType="TINYINT" />
+    <result column="error_reason" property="errorReason" jdbcType="VARCHAR" />
+    <result column="gmt_sumbit_channel" property="gmtSumbitChannel" jdbcType="TIMESTAMP" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="gmt_modify" property="gmtModify" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>

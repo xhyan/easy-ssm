@@ -1,6 +1,8 @@
 group 'com.xhyan'
 version '1.0-SNAPSHOT'
 
+apply from: "config.gradle"
+
 ext {
     if (!project.hasProperty("env")) {
         println '没有配置数据环境，默认使用 开发环境'
@@ -41,5 +43,7 @@ subprojects {
          testCompile 'org.springframework.restdocs:spring-restdocs-restassured:1.1.0.RC1'
          testCompile 'org.springframework.restdocs:spring-restdocs-mockmvc:1.1.0.RC1'
          testCompile 'com.fasterxml.jackson.module:jackson-module-jsonSchema:2.4.0'
+
+         compile 'org.springframework:spring-core:4.2.5.RELEASE'
      }
  }

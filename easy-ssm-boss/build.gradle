@@ -3,3 +3,11 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'war'
+
+dependencies {
+    //依赖common依赖
+    compile project(':easy-ssm-common')
+    //springMVC
+    compile rootProject.ext.dependencies["spring-webmvc"]
+    providedCompile rootProject.ext.dependencies["javax.servlet-api"]
+}

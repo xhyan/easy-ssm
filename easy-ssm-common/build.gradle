@@ -33,15 +33,16 @@ dependencies {
     //通用mapper工具
     compile rootProject.ext.dependencies["mapper"]
     //数据库分页插件
-    compile 'com.github.pagehelper:pagehelper:4.1.3'
+    compile rootProject.ext.dependencies["pagehelper"]
     //spring相关依赖
 
-    compile 'org.springframework:spring-orm:4.2.5.RELEASE'
-    compile 'org.springframework:spring-context-support:4.2.5.RELEASE'
+    compile rootProject.ext.dependencies["spring-orm"]
+    compile rootProject.ext.dependencies["spring-context-support"]
     //aop
-    compile 'org.aspectj:aspectjweaver:1.8.9'
-    compile 'javax.mail:mail:1.4.7'
-    compile 'org.slf4j:slf4j-log4j12:1.7.21'
+    compile rootProject.ext.dependencies["aspectjweaver"]
+    compile rootProject.ext.dependencies["mail"]
+    compile rootProject.ext.dependencies["slf4j-log4j12"]
+
 
     //compile 'com.fasterxml.jackson.core:jackson-databind:2.7.3'
     //compile 'commons-fileupload:commons-fileupload:1.3.1'
@@ -49,9 +50,9 @@ dependencies {
     //compile 'org.apache.tomcat:tomcat-jdbc:8.0.33'
 
     //mybatis生成器插件依赖
-    mybatisGenerator 'org.mybatis.generator:mybatis-generator-core:1.3.2'
-    mybatisGenerator 'mysql:mysql-connector-java:5.1.38'
-    mybatisGenerator 'tk.mybatis:mapper:3.3.8'
+    mybatisGenerator rootProject.ext.dependencies["mybatis-generator"]
+    mybatisGenerator rootProject.ext.dependencies["mysql-connector-java"]
+    mybatisGenerator rootProject.ext.dependencies["mapper"]
 }
 
 sourceSets {

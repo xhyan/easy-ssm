@@ -1,12 +1,14 @@
 group 'com.xhyan'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'java'
 apply plugin: 'war'
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    //依赖common依赖
+    compile project(':easy-ssm-common')
+    //springMVC
+    compile rootProject.ext.dependencies["spring-webmvc"]
+    compile rootProject.ext.dependencies["spring-context-support"]
+    providedCompile rootProject.ext.dependencies["javax.servlet-api"]
 }

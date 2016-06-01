@@ -10,7 +10,7 @@ ext {
 
     }
 }
-
+//所有项目通用配置
 allprojects{
   apply plugin: 'idea'
 }
@@ -33,17 +33,17 @@ subprojects {
      [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
      dependencies {
-         testCompile 'org.hamcrest:hamcrest-core:1.3'
-         testCompile 'org.mockito:mockito-core:1.10.19'
-         testCompile 'com.jayway.restassured:rest-assured:2.9.0'
-         testCompile 'com.jayway.restassured:spring-mock-mvc:2.9.0'
-         testCompile 'junit:junit:4.12'
-         testCompile 'org.springframework:spring-test:4.2.5.RELEASE'
-         testCompile 'com.jayway.restassured:json-schema-validator:2.9.0'
-         testCompile 'org.springframework.restdocs:spring-restdocs-restassured:1.1.0.RC1'
-         testCompile 'org.springframework.restdocs:spring-restdocs-mockmvc:1.1.0.RC1'
-         testCompile 'com.fasterxml.jackson.module:jackson-module-jsonSchema:2.4.0'
+         testCompile this.ext.dependencies["hamcrest-core"]
+         testCompile this.ext.dependencies["mockito-core"]
+         testCompile this.ext.dependencies["rest-assured"]
+         testCompile this.ext.dependencies["spring-mock-mvc"]
+         testCompile this.ext.dependencies["junit"]
+         testCompile this.ext.dependencies["spring-test"]
+         testCompile this.ext.dependencies["json-schema-validator"]
+         testCompile this.ext.dependencies["spring-restdocs-restassured"]
+         testCompile this.ext.dependencies["spring-restdocs-mockmvc"]
+         testCompile this.ext.dependencies["jackson-module-jsonSchema"]
 
-         compile 'org.springframework:spring-core:4.2.5.RELEASE'
+         compile this.ext.dependencies["spring-core"]
      }
  }

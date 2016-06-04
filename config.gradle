@@ -26,7 +26,8 @@ ext{
         'json-schema-validator': 'com.jayway.restassured:json-schema-validator:2.9.0',
         'spring-restdocs-restassured': 'org.springframework.restdocs:spring-restdocs-restassured:1.1.0.RC1',
         'spring-restdocs-mockmvc': 'org.springframework.restdocs:spring-restdocs-mockmvc:1.1.0.RC1',
-        'jackson-module-jsonSchema': 'com.fasterxml.jackson.module:jackson-module-jsonSchema:2.4.0'
+        'jackson-module-jsonSchema': 'com.fasterxml.jackson.module:jackson-module-jsonSchema:2.4.0',
+        'owner': 'org.aeonbits.owner:owner:1.0.9'
 
 ]
 }

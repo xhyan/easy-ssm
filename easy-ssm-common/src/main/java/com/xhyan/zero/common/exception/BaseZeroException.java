@@ -6,21 +6,21 @@ package com.xhyan.zero.common.exception;
  * @author yanliwei
  * @create 2016/6/2
  */
-public class ZeroException extends RuntimeException {
+public class BaseZeroException extends RuntimeException {
 
     private String code;    //错误码
     private String msg;     //错误信息
 
-    public ZeroException(Throwable cause){
+    public BaseZeroException(Throwable cause){
         super(cause);
     }
 
-    public ZeroException(String errorMsg){
+    public BaseZeroException(String errorMsg){
         super(errorMsg);
         this.msg = errorMsg;
     }
 
-    public ZeroException(String errorCode, String errorMsg){
+    public BaseZeroException(String errorCode, String errorMsg){
         super(errorMsg);
         this.code = errorCode;
         this.msg = errorMsg;

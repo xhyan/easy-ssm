@@ -6,7 +6,7 @@ package com.xhyan.zero.common.exception;
  * @author yanliwei
  * @create 2016/6/2
  */
-public class ParamException extends ZeroException {
+public class ParamException extends BaseZeroException {
 
     public ParamException(Throwable cause) {
         super(cause);

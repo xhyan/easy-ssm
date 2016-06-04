@@ -8,7 +8,9 @@ package com.xhyan.zero.common.enums;
  */
 public enum ExceptionCode {
 
-    SYSTEM_ERROR("system.error");
+    SYSTEM_ERROR("system.error"),
+    ACCOUNT_NOT_FOUND("account.not.found"),
+    ;
 
 
     private String code;

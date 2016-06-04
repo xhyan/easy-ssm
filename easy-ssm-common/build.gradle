@@ -42,6 +42,8 @@ dependencies {
     compile rootProject.ext.dependencies["aspectjweaver"]
     compile rootProject.ext.dependencies["mail"]
     compile rootProject.ext.dependencies["slf4j-log4j12"]
+    //配置文件工具
+    compile rootProject.ext.dependencies["owner"]
 
 
     //compile 'com.fasterxml.jackson.core:jackson-databind:2.7.3'

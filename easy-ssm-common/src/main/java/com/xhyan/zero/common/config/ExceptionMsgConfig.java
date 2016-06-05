@@ -10,5 +10,5 @@ import org.aeonbits.owner.Config;
  * @create 2016/6/3
  */
 @Config.Sources("classpath:config/exception-msg.properties")
-public interface ExcetionMsgConfig extends Config, Accessible{
+public interface ExceptionMsgConfig extends Config, Accessible{
 }

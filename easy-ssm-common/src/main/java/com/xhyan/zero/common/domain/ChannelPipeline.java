@@ -1,81 +1,64 @@
 package com.xhyan.zero.common.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Table;
 
 @Table(name = "channel_pipeline")
-public class ChannelPipeline {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class ChannelPipeline extends BaseDomain {
+	@Column(name = "channel_id")
+	private Long channelId;
 
-    @Column(name = "channel_id")
-    private Long channelId;
+	@Column(name = "pipeline_id")
+	private Long pipelineId;
 
-    @Column(name = "pipeline_id")
-    private Long pipelineId;
+	/**
+	 * 备注
+	 */
+	private String memo;
 
-    /**
-     * 备注
-     */
-    private String memo;
+	/**
+	 * @return channel_id
+	 */
+	public Long getChannelId() {
+		return channelId;
+	}
 
-    /**
-     * @return id
-     */
-    public Long getId() {
-        return id;
-    }
+	/**
+	 * @param channelId
+	 */
+	public void setChannelId(Long channelId) {
+		this.channelId = channelId;
+	}
 
-    /**
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
+	/**
+	 * @return pipeline_id
+	 */
+	public Long getPipelineId() {
+		return pipelineId;
+	}
 
-    /**
-     * @return channel_id
-     */
-    public Long getChannelId() {
-        return channelId;
-    }
+	/**
+	 * @param pipelineId
+	 */
+	public void setPipelineId(Long pipelineId) {
+		this.pipelineId = pipelineId;
+	}
 
-    /**
-     * @param channelId
-     */
-    public void setChannelId(Long channelId) {
-        this.channelId = channelId;
-    }
+	/**
+	 * 获取备注
+	 *
+	 * @return memo - 备注
+	 */
+	public String getMemo() {
+		return memo;
+	}
 
-    /**
-     * @return pipeline_id
-     */
-    public Long getPipelineId() {
-        return pipelineId;
-    }
-
-    /**
-     * @param pipelineId
-     */
-    public void setPipelineId(Long pipelineId) {
-        this.pipelineId = pipelineId;
-    }
-
-    /**
-     * 获取备注
-     *
-     * @return memo - 备注
-     */
-    public String getMemo() {
-        return memo;
-    }
-
-    /**
-     * 设置备注
-     *
-     * @param memo 备注
-     */
-    public void setMemo(String memo) {
-        this.memo = memo;
-    }
+	/**
+	 * 设置备注
+	 *
+	 * @param memo 备注
+	 */
+	public void setMemo(String memo) {
+		this.memo = memo;
+	}
 }

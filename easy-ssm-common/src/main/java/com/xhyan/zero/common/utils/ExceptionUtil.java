@@ -1,13 +1,12 @@
 package com.xhyan.zero.common.utils;
 
-import com.xhyan.zero.common.config.ExcetionMsgConfig;
+import com.xhyan.zero.common.config.ExceptionMsgConfig;
 import com.xhyan.zero.common.enums.ExceptionCode;
 import com.xhyan.zero.common.exception.CommonException;
 import org.aeonbits.owner.Config;
 import org.aeonbits.owner.ConfigCache;
 
 import java.text.MessageFormat;
-import java.util.Properties;
 
 /**
  * 系统异常的工具类
@@ -17,7 +16,7 @@ import java.util.Properties;
  */
 public class ExceptionUtil {
     //异常信息配置文件映射
-    private static ExcetionMsgConfig msgConfig = ConfigCache.getOrCreate(ExcetionMsgConfig.class);
+    private static ExceptionMsgConfig msgConfig = ConfigCache.getOrCreate(ExceptionMsgConfig.class);
 
     public static void throwCommonException(ExceptionCode code) {
         throw new CommonException(code.getCode(), msgConfig.getProperty(code

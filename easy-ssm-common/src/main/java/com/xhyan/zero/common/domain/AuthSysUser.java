@@ -1,301 +1,250 @@
 package com.xhyan.zero.common.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Table;
 import java.util.Date;
-import javax.persistence.*;
 
 @Table(name = "auth_sys_user")
-public class AuthSysUser {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class AuthSysUser extends BaseDomain {
+	/**
+	 * 登录名
+	 */
+	@Column(name = "user_name")
+	private String userName;
 
-    /**
-     * 登录名
-     */
-    @Column(name = "user_name")
-    private String userName;
+	/**
+	 * 用户状态
+	 */
+	private Boolean status;
 
-    /**
-     * 用户状态
-     */
-    private Boolean status;
+	/**
+	 * 密码
+	 */
+	private String password;
 
-    /**
-     * 密码
-     */
-    private String password;
+	@Column(name = "real_name")
+	private String realName;
 
-    @Column(name = "real_name")
-    private String realName;
+	private Boolean sex;
 
-    private Boolean sex;
+	private String phone;
 
-    private String phone;
+	private String mobile;
 
-    private String mobile;
+	private String email;
 
-    private String email;
+	@Column(name = "last_login")
+	private Date lastLogin;
 
-    @Column(name = "last_login")
-    private Date lastLogin;
+	@Column(name = "valid_begin_time")
+	private Date validBeginTime;
 
-    @Column(name = "valid_begin_time")
-    private Date validBeginTime;
+	@Column(name = "valid_end_time")
+	private Date validEndTime;
 
-    @Column(name = "valid_end_time")
-    private Date validEndTime;
+	private String remark;
 
-    private String remark;
+	/**
+	 * 是否是超级管理员
+	 */
+	@Column(name = "is_super")
+	private Byte isSuper;
 
-    /**
-     * 是否是超级管理员
-     */
-    @Column(name = "is_super")
-    private Byte isSuper;
+	/**
+	 * 获取登录名
+	 *
+	 * @return user_name - 登录名
+	 */
+	public String getUserName() {
+		return userName;
+	}
 
-    @Column(name = "gmt_create")
-    private Date gmtCreate;
+	/**
+	 * 设置登录名
+	 *
+	 * @param userName 登录名
+	 */
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
-    @Column(name = "gmt_modify")
-    private Date gmtModify;
+	/**
+	 * 获取用户状态
+	 *
+	 * @return status - 用户状态
+	 */
+	public Boolean getStatus() {
+		return status;
+	}
 
-    /**
-     * @return id
-     */
-    public Long getId() {
-        return id;
-    }
+	/**
+	 * 设置用户状态
+	 *
+	 * @param status 用户状态
+	 */
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
 
-    /**
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
+	/**
+	 * 获取密码
+	 *
+	 * @return password - 密码
+	 */
+	public String getPassword() {
+		return password;
+	}
 
-    /**
-     * 获取登录名
-     *
-     * @return user_name - 登录名
-     */
-    public String getUserName() {
-        return userName;
-    }
+	/**
+	 * 设置密码
+	 *
+	 * @param password 密码
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    /**
-     * 设置登录名
-     *
-     * @param userName 登录名
-     */
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+	/**
+	 * @return real_name
+	 */
+	public String getRealName() {
+		return realName;
+	}
 
-    /**
-     * 获取用户状态
-     *
-     * @return status - 用户状态
-     */
-    public Boolean getStatus() {
-        return status;
-    }
+	/**
+	 * @param realName
+	 */
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
 
-    /**
-     * 设置用户状态
-     *
-     * @param status 用户状态
-     */
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
+	/**
+	 * @return sex
+	 */
+	public Boolean getSex() {
+		return sex;
+	}
 
-    /**
-     * 获取密码
-     *
-     * @return password - 密码
-     */
-    public String getPassword() {
-        return password;
-    }
+	/**
+	 * @param sex
+	 */
+	public void setSex(Boolean sex) {
+		this.sex = sex;
+	}
 
-    /**
-     * 设置密码
-     *
-     * @param password 密码
-     */
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	/**
+	 * @return phone
+	 */
+	public String getPhone() {
+		return phone;
+	}
 
-    /**
-     * @return real_name
-     */
-    public String getRealName() {
-        return realName;
-    }
+	/**
+	 * @param phone
+	 */
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
-    /**
-     * @param realName
-     */
-    public void setRealName(String realName) {
-        this.realName = realName;
-    }
+	/**
+	 * @return mobile
+	 */
+	public String getMobile() {
+		return mobile;
+	}
 
-    /**
-     * @return sex
-     */
-    public Boolean getSex() {
-        return sex;
-    }
+	/**
+	 * @param mobile
+	 */
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
 
-    /**
-     * @param sex
-     */
-    public void setSex(Boolean sex) {
-        this.sex = sex;
-    }
+	/**
+	 * @return email
+	 */
+	public String getEmail() {
+		return email;
+	}
 
-    /**
-     * @return phone
-     */
-    public String getPhone() {
-        return phone;
-    }
+	/**
+	 * @param email
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    /**
-     * @param phone
-     */
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+	/**
+	 * @return last_login
+	 */
+	public Date getLastLogin() {
+		return lastLogin;
+	}
 
-    /**
-     * @return mobile
-     */
-    public String getMobile() {
-        return mobile;
-    }
+	/**
+	 * @param lastLogin
+	 */
+	public void setLastLogin(Date lastLogin) {
+		this.lastLogin = lastLogin;
+	}
 
-    /**
-     * @param mobile
-     */
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
+	/**
+	 * @return valid_begin_time
+	 */
+	public Date getValidBeginTime() {
+		return validBeginTime;
+	}
 
-    /**
-     * @return email
-     */
-    public String getEmail() {
-        return email;
-    }
+	/**
+	 * @param validBeginTime
+	 */
+	public void setValidBeginTime(Date validBeginTime) {
+		this.validBeginTime = validBeginTime;
+	}
 
-    /**
-     * @param email
-     */
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	/**
+	 * @return valid_end_time
+	 */
+	public Date getValidEndTime() {
+		return validEndTime;
+	}
 
-    /**
-     * @return last_login
-     */
-    public Date getLastLogin() {
-        return lastLogin;
-    }
+	/**
+	 * @param validEndTime
+	 */
+	public void setValidEndTime(Date validEndTime) {
+		this.validEndTime = validEndTime;
+	}
 
-    /**
-     * @param lastLogin
-     */
-    public void setLastLogin(Date lastLogin) {
-        this.lastLogin = lastLogin;
-    }
+	/**
+	 * @return remark
+	 */
+	public String getRemark() {
+		return remark;
+	}
 
-    /**
-     * @return valid_begin_time
-     */
-    public Date getValidBeginTime() {
-        return validBeginTime;
-    }
+	/**
+	 * @param remark
+	 */
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
 
-    /**
-     * @param validBeginTime
-     */
-    public void setValidBeginTime(Date validBeginTime) {
-        this.validBeginTime = validBeginTime;
-    }
+	/**
+	 * 获取是否是超级管理员
+	 *
+	 * @return is_super - 是否是超级管理员
+	 */
+	public Byte getIsSuper() {
+		return isSuper;
+	}
 
-    /**
-     * @return valid_end_time
-     */
-    public Date getValidEndTime() {
-        return validEndTime;
-    }
-
-    /**
-     * @param validEndTime
-     */
-    public void setValidEndTime(Date validEndTime) {
-        this.validEndTime = validEndTime;
-    }
-
-    /**
-     * @return remark
-     */
-    public String getRemark() {
-        return remark;
-    }
-
-    /**
-     * @param remark
-     */
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-    /**
-     * 获取是否是超级管理员
-     *
-     * @return is_super - 是否是超级管理员
-     */
-    public Byte getIsSuper() {
-        return isSuper;
-    }
-
-    /**
-     * 设置是否是超级管理员
-     *
-     * @param isSuper 是否是超级管理员
-     */
-    public void setIsSuper(Byte isSuper) {
-        this.isSuper = isSuper;
-    }
-
-    /**
-     * @return gmt_create
-     */
-    public Date getGmtCreate() {
-        return gmtCreate;
-    }
-
-    /**
-     * @param gmtCreate
-     */
-    public void setGmtCreate(Date gmtCreate) {
-        this.gmtCreate = gmtCreate;
-    }
-
-    /**
-     * @return gmt_modify
-     */
-    public Date getGmtModify() {
-        return gmtModify;
-    }
-
-    /**
-     * @param gmtModify
-     */
-    public void setGmtModify(Date gmtModify) {
-        this.gmtModify = gmtModify;
-    }
+	/**
+	 * 设置是否是超级管理员
+	 *
+	 * @param isSuper 是否是超级管理员
+	 */
+	public void setIsSuper(Byte isSuper) {
+		this.isSuper = isSuper;
+	}
 }

@@ -6,8 +6,8 @@
       WARNING - @mbggenerated
     -->
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="fromAccountId" property="fromaccountid" jdbcType="BIGINT" />
-    <result column="toAccountId" property="toaccountid" jdbcType="BIGINT" />
+    <result column="src_account_id" property="srcAccountId" jdbcType="BIGINT" />
+    <result column="des_account_id" property="desAccountId" jdbcType="BIGINT" />
     <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
     <result column="gmt_modify" property="gmtModify" jdbcType="TIMESTAMP" />
   </resultMap>

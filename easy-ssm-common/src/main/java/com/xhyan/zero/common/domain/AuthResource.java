@@ -1,8 +1,11 @@
 package com.xhyan.zero.common.domain;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Table;
 
+@Data
 @Table(name = "auth_resource")
 public class AuthResource extends BaseDomain {
 	/**
@@ -19,53 +22,4 @@ public class AuthResource extends BaseDomain {
 	 */
 	private String remark;
 
-	/**
-	 * 获取URL路径
-	 *
-	 * @return url_path - URL路径
-	 */
-	public String getUrlPath() {
-		return urlPath;
-	}
-
-	/**
-	 * 设置URL路径
-	 *
-	 * @param urlPath URL路径
-	 */
-	public void setUrlPath(String urlPath) {
-		this.urlPath = urlPath;
-	}
-
-	/**
-	 * @return parent_id
-	 */
-	public String getParentId() {
-		return parentId;
-	}
-
-	/**
-	 * @param parentId
-	 */
-	public void setParentId(String parentId) {
-		this.parentId = parentId;
-	}
-
-	/**
-	 * 获取描述
-	 *
-	 * @return remark - 描述
-	 */
-	public String getRemark() {
-		return remark;
-	}
-
-	/**
-	 * 设置描述
-	 *
-	 * @param remark 描述
-	 */
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
 }

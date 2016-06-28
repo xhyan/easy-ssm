@@ -1,9 +1,12 @@
 package com.xhyan.zero.common.domain;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Data
 @Table(name = "auth_role_res")
 public class AuthRoleRes extends BaseDomain {
 	@Id
@@ -14,31 +17,4 @@ public class AuthRoleRes extends BaseDomain {
 	@Column(name = "res_id")
 	private Integer resId;
 
-	/**
-	 * @return role_id
-	 */
-	public Integer getRoleId() {
-		return roleId;
-	}
-
-	/**
-	 * @param roleId
-	 */
-	public void setRoleId(Integer roleId) {
-		this.roleId = roleId;
-	}
-
-	/**
-	 * @return res_id
-	 */
-	public Integer getResId() {
-		return resId;
-	}
-
-	/**
-	 * @param resId
-	 */
-	public void setResId(Integer resId) {
-		this.resId = resId;
-	}
 }

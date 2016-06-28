@@ -45,5 +45,6 @@ subprojects {
          testCompile this.ext.dependencies["jackson-module-jsonSchema"]
 
          compile this.ext.dependencies["spring-core"]
+         compile this.ext.dependencies["lombok"]
      }
  }

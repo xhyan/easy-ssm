@@ -1,8 +1,11 @@
 package com.xhyan.zero.common.domain;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Table;
 
+@Data
 @Table(name = "auth_role")
 public class AuthRole extends BaseDomain{
 	/**
@@ -21,58 +24,4 @@ public class AuthRole extends BaseDomain{
 	 */
 	@Column(name = "create_by")
 	private Long createBy;
-
-	/**
-	 * 获取角色名称
-	 *
-	 * @return role_name - 角色名称
-	 */
-	public String getRoleName() {
-		return roleName;
-	}
-
-	/**
-	 * 设置角色名称
-	 *
-	 * @param roleName 角色名称
-	 */
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
-	}
-
-	/**
-	 * 获取备注
-	 *
-	 * @return remark - 备注
-	 */
-	public String getRemark() {
-		return remark;
-	}
-
-	/**
-	 * 设置备注
-	 *
-	 * @param remark 备注
-	 */
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
-
-	/**
-	 * 获取创建人
-	 *
-	 * @return create_by - 创建人
-	 */
-	public Long getCreateBy() {
-		return createBy;
-	}
-
-	/**
-	 * 设置创建人
-	 *
-	 * @param createBy 创建人
-	 */
-	public void setCreateBy(Long createBy) {
-		this.createBy = createBy;
-	}
 }

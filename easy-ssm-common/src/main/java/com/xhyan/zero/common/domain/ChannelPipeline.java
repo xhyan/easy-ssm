@@ -1,8 +1,11 @@
 package com.xhyan.zero.common.domain;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Table;
 
+@Data
 @Table(name = "channel_pipeline")
 public class ChannelPipeline extends BaseDomain {
 	@Column(name = "channel_id")
@@ -15,50 +18,4 @@ public class ChannelPipeline extends BaseDomain {
 	 * 备注
 	 */
 	private String memo;
-
-	/**
-	 * @return channel_id
-	 */
-	public Long getChannelId() {
-		return channelId;
-	}
-
-	/**
-	 * @param channelId
-	 */
-	public void setChannelId(Long channelId) {
-		this.channelId = channelId;
-	}
-
-	/**
-	 * @return pipeline_id
-	 */
-	public Long getPipelineId() {
-		return pipelineId;
-	}
-
-	/**
-	 * @param pipelineId
-	 */
-	public void setPipelineId(Long pipelineId) {
-		this.pipelineId = pipelineId;
-	}
-
-	/**
-	 * 获取备注
-	 *
-	 * @return memo - 备注
-	 */
-	public String getMemo() {
-		return memo;
-	}
-
-	/**
-	 * 设置备注
-	 *
-	 * @param memo 备注
-	 */
-	public void setMemo(String memo) {
-		this.memo = memo;
-	}
 }

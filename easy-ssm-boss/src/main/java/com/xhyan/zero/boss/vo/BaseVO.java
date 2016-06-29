@@ -1,38 +1,17 @@
 package com.xhyan.zero.boss.vo;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 视图对象的基类对象
  */
-public class BaseVO {
+@Data
+public class BaseVO implements Serializable{
 
 	private Long id;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Date getGmtCreate() {
-		return gmtCreate;
-	}
-
-	public void setGmtCreate(Date gmtCreate) {
-		this.gmtCreate = gmtCreate;
-	}
-
-	public Date getGmtModify() {
-		return gmtModify;
-	}
-
-	public void setGmtModify(Date gmtModify) {
-		this.gmtModify = gmtModify;
-	}
-
 	/**
 	 * 创建时间
 	 */

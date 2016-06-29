@@ -11,8 +11,8 @@ ext {
     }
 }
 //所有项目通用配置
-allprojects{
-  apply plugin: 'idea'
+allprojects {
+    apply plugin: 'idea'
 }
 
 // 所有子项目通用配置
@@ -24,27 +24,27 @@ subprojects {
     targetCompatibility = 1.7
 
     repositories {
-         mavenCentral()
-         maven {
-             url 'https://repo.spring.io/libs-milestone'
-         }
-     }
-     //统一编码为utf-8
-     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+        mavenCentral()
+        maven {
+            url 'https://repo.spring.io/libs-milestone'
+        }
+    }
+    //统一编码为utf-8
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
-     dependencies {
-         testCompile this.ext.dependencies["hamcrest-core"]
-         testCompile this.ext.dependencies["mockito-core"]
-         testCompile this.ext.dependencies["rest-assured"]
-         testCompile this.ext.dependencies["spring-mock-mvc"]
-         testCompile this.ext.dependencies["junit"]
-         testCompile this.ext.dependencies["spring-test"]
-         testCompile this.ext.dependencies["json-schema-validator"]
-         testCompile this.ext.dependencies["spring-restdocs-restassured"]
-         testCompile this.ext.dependencies["spring-restdocs-mockmvc"]
-         testCompile this.ext.dependencies["jackson-module-jsonSchema"]
+    dependencies {
+        testCompile this.ext.dependencies["hamcrest-core"]
+        testCompile this.ext.dependencies["mockito-core"]
+        testCompile this.ext.dependencies["rest-assured"]
+        testCompile this.ext.dependencies["spring-mock-mvc"]
+        testCompile this.ext.dependencies["junit"]
+        testCompile this.ext.dependencies["spring-test"]
+        testCompile this.ext.dependencies["json-schema-validator"]
+        testCompile this.ext.dependencies["spring-restdocs-restassured"]
+        testCompile this.ext.dependencies["spring-restdocs-mockmvc"]
+        testCompile this.ext.dependencies["jackson-module-jsonSchema"]
 
-         compile this.ext.dependencies["spring-core"]
-         compile this.ext.dependencies["lombok"]
-     }
- }
+        compile this.ext.dependencies["spring-core"]
+        compile this.ext.dependencies["lombok"]
+    }
+}

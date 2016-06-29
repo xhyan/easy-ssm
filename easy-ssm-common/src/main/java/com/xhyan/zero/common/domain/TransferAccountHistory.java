@@ -1,8 +1,11 @@
 package com.xhyan.zero.common.domain;
 
-import java.util.Date;
-import javax.persistence.*;
+import lombok.Data;
 
+import javax.persistence.Column;
+import javax.persistence.Table;
+
+@Data
 @Table(name = "transfer_account_history")
 public class TransferAccountHistory {
 

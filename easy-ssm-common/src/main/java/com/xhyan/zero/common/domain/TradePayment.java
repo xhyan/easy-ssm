@@ -1,9 +1,13 @@
 package com.xhyan.zero.common.domain;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Table;
 import java.util.Date;
 
+
+@Data
 @Table(name = "trade_payment")
 public class TradePayment extends BaseDomain {
 
@@ -57,168 +61,4 @@ public class TradePayment extends BaseDomain {
 	 * 状态:1待付款,2付款成功,3付款失败
 	 */
 	private Byte status;
-
-
-	/**
-	 * 获取关联交易号ID(trade.id)
-	 *
-	 * @return trade_id - 关联交易号ID(trade.id)
-	 */
-	public Long getTradeId() {
-		return tradeId;
-	}
-
-	/**
-	 * 设置关联交易号ID(trade.id)
-	 *
-	 * @param tradeId 关联交易号ID(trade.id)
-	 */
-	public void setTradeId(Long tradeId) {
-		this.tradeId = tradeId;
-	}
-
-	/**
-	 * 获取付款账户(account.id)
-	 *
-	 * @return src_account_id - 付款账户(account.id)
-	 */
-	public Long getSrcAccountId() {
-		return srcAccountId;
-	}
-
-	/**
-	 * 设置付款账户(account.id)
-	 *
-	 * @param srcAccountId 付款账户(account.id)
-	 */
-	public void setSrcAccountId(Long srcAccountId) {
-		this.srcAccountId = srcAccountId;
-	}
-
-	/**
-	 * 获取收款账户(account.id)
-	 *
-	 * @return des_account_id - 收款账户(account.id)
-	 */
-	public Long getDesAccountId() {
-		return desAccountId;
-	}
-
-	/**
-	 * 设置收款账户(account.id)
-	 *
-	 * @param desAccountId 收款账户(account.id)
-	 */
-	public void setDesAccountId(Long desAccountId) {
-		this.desAccountId = desAccountId;
-	}
-
-	/**
-	 * 获取支付总额
-	 *
-	 * @return amount - 支付总额
-	 */
-	public Long getAmount() {
-		return amount;
-	}
-
-	/**
-	 * 设置支付总额
-	 *
-	 * @param amount 支付总额
-	 */
-	public void setAmount(Long amount) {
-		this.amount = amount;
-	}
-
-	/**
-	 * 获取使用的余额额度
-	 *
-	 * @return used_balance - 使用的余额额度
-	 */
-	public Long getUsedBalance() {
-		return usedBalance;
-	}
-
-	/**
-	 * 设置使用的余额额度
-	 *
-	 * @param usedBalance 使用的余额额度
-	 */
-	public void setUsedBalance(Long usedBalance) {
-		this.usedBalance = usedBalance;
-	}
-
-	/**
-	 * 获取使用信用余额
-	 *
-	 * @return used_credit - 使用信用余额
-	 */
-	public Long getUsedCredit() {
-		return usedCredit;
-	}
-
-	/**
-	 * 设置使用信用余额
-	 *
-	 * @param usedCredit 使用信用余额
-	 */
-	public void setUsedCredit(Long usedCredit) {
-		this.usedCredit = usedCredit;
-	}
-
-	/**
-	 * 获取交易日
-	 *
-	 * @return trade_date - 交易日
-	 */
-	public Date getTradeDate() {
-		return tradeDate;
-	}
-
-	/**
-	 * 设置交易日
-	 *
-	 * @param tradeDate 交易日
-	 */
-	public void setTradeDate(Date tradeDate) {
-		this.tradeDate = tradeDate;
-	}
-
-	/**
-	 * 获取付款备注
-	 *
-	 * @return comment - 付款备注
-	 */
-	public String getComment() {
-		return comment;
-	}
-
-	/**
-	 * 设置付款备注
-	 *
-	 * @param comment 付款备注
-	 */
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
-
-	/**
-	 * 获取状态:1待付款,2付款成功,3付款失败
-	 *
-	 * @return status - 状态:1待付款,2付款成功,3付款失败
-	 */
-	public Byte getStatus() {
-		return status;
-	}
-
-	/**
-	 * 设置状态:1待付款,2付款成功,3付款失败
-	 *
-	 * @param status 状态:1待付款,2付款成功,3付款失败
-	 */
-	public void setStatus(Byte status) {
-		this.status = status;
-	}
-
 }

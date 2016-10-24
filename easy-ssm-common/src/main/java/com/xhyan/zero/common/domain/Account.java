@@ -8,8 +8,6 @@ import javax.persistence.Table;
 @Data
 @Table(name = "account")
 public class Account extends BaseDomain {
-
-
 	/**
 	 * 登录名
 	 */

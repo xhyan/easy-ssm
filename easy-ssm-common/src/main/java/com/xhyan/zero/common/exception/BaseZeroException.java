@@ -6,7 +6,7 @@ package com.xhyan.zero.common.exception;
  * @author yanliwei
  * @create 2016/6/2
  */
-public class BaseZeroException extends RuntimeException {
+public abstract class BaseZeroException extends RuntimeException {
 
     private String code;    //错误码
     private String msg;     //错误信息

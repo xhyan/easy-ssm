@@ -7,7 +7,6 @@ apply plugin: 'war'
 dependencies {
     //依赖common依赖
     compile project(':easy-ssm-common')
-    //springMVC
-    compile rootProject.ext.dependencies["spring-webmvc"]
-    providedCompile rootProject.ext.dependencies["javax.servlet-api"]
+    //spring boot web 项目
+    compile rootProject.ext.starters["spring-boot-starter-web"]
 }

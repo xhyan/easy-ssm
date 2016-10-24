@@ -1,7 +1,7 @@
 package com.xhyan.zero.common.exception;
 
 /**
- * ${DESCRIPTION}
+ * 统一异常,业务异常中除了特殊定义异常
  *
  * @author yanliwei
  * @create 2016/6/4

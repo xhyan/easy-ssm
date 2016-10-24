@@ -1,7 +1,7 @@
 package com.xhyan.zero.common.enums;
 
 /**
- * ${DESCRIPTION}
+ * 系统统一异常错我码定义
  *
  * @author yanliwei
  * @create 2016/6/2

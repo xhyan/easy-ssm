@@ -1,50 +1,53 @@
-group 'com.xhyan'
-version '1.0-SNAPSHOT'
-
-apply from: "config.gradle"
-
-ext {
-    if (!project.hasProperty("env")) {
-        println '没有配置数据环境，默认使用 开发环境'
-        env = "dev"
-
+buildscript {
+    ext {
+        springBootVersion = '1.4.1.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
-//所有项目通用配置
-allprojects {
-    apply plugin: 'idea'
-}
+
+
+group 'com.xhyan'
+version '1.0-SNAPSHOT'
+apply from: "config.gradle"
+
 
 // 所有子项目通用配置
 subprojects {
-
     apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'spring-boot'
 
-    sourceCompatibility = 1.7
-    targetCompatibility = 1.7
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 
     repositories {
         mavenCentral()
-        maven {
-            url 'https://repo.spring.io/libs-milestone'
-        }
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
     }
     //统一编码为utf-8
     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
     dependencies {
-        testCompile this.ext.dependencies["hamcrest-core"]
-        testCompile this.ext.dependencies["mockito-core"]
-        testCompile this.ext.dependencies["rest-assured"]
-        testCompile this.ext.dependencies["spring-mock-mvc"]
-        testCompile this.ext.dependencies["junit"]
-        testCompile this.ext.dependencies["spring-test"]
-        testCompile this.ext.dependencies["json-schema-validator"]
-        testCompile this.ext.dependencies["spring-restdocs-restassured"]
-        testCompile this.ext.dependencies["spring-restdocs-mockmvc"]
-        testCompile this.ext.dependencies["jackson-module-jsonSchema"]
-
-        compile this.ext.dependencies["spring-core"]
         compile this.ext.dependencies["lombok"]
+
+
+//        testCompile this.ext.dependencies["hamcrest-core"]
+//        testCompile this.ext.dependencies["mockito-core"]
+//        testCompile this.ext.dependencies["rest-assured"]
+//        testCompile this.ext.dependencies["spring-mock-mvc"]
+//        testCompile this.ext.dependencies["junit"]
+//        testCompile this.ext.dependencies["spring-test"]
+//        testCompile this.ext.dependencies["json-schema-validator"]
+//        testCompile this.ext.dependencies["spring-restdocs-restassured"]
+//        testCompile this.ext.dependencies["spring-restdocs-mockmvc"]
+//        testCompile this.ext.dependencies["jackson-module-jsonSchema"]
+        testCompile rootProject.ext.starters["spring-boot-starter-test"]
+
     }
 }

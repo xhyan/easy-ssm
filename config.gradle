@@ -28,7 +28,20 @@ ext {
             'spring-restdocs-mockmvc'    : 'org.springframework.restdocs:spring-restdocs-mockmvc:1.1.0.RC1',
             'jackson-module-jsonSchema'  : 'com.fasterxml.jackson.module:jackson-module-jsonSchema:2.4.0',
             'owner'                      : 'org.aeonbits.owner:owner:1.0.9',
-            'lombok'                     : 'org.projectlombok:lombok:1.16.8'
+            'lombok'                     : 'org.projectlombok:lombok:1.16.8',
+            'flyway-core'                : 'org.flywaydb:flyway-core:4.0.3'
 
+    ]
+
+    starters = [
+            'spring-boot-starter'        : 'org.springframework.boot:spring-boot-starter',
+            'spring-boot-starter-jdbc'   : 'org.springframework.boot:spring-boot-starter-jdbc',
+            'spring-boot-starter-web'    : 'org.springframework.boot:spring-boot-starter-web',
+            'spring-boot-starter-logging': 'org.springframework.boot:spring-boot-starter-logging',
+            'spring-boot-starter-test'   : 'org.springframework.boot:spring-boot-starter-test'
+    ]
+
+    plugins = [
+            'spring-boot-gradle-plugin'  : 'org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE'
     ]
 }

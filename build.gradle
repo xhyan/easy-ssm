@@ -15,11 +15,14 @@ group 'com.xhyan'
 version '1.0-SNAPSHOT'
 apply from: "config.gradle"
 
+//所有项目通用配置
+allprojects {
+    apply plugin: 'idea'
+}
 
 // 所有子项目通用配置
 subprojects {
     apply plugin: 'java'
-    apply plugin: 'idea'
     apply plugin: 'spring-boot'
 
     sourceCompatibility = 1.8

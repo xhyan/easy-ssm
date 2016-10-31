@@ -4,6 +4,11 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'war'
 
+configurations {
+    // 所有需要忽略的包定义在此
+    all*.exclude group: 'org.flywaydb'
+}
+
 dependencies {
     //依赖common依赖
     compile project(':easy-ssm-common')

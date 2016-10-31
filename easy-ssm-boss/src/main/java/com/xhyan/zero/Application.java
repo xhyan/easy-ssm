@@ -1,4 +1,4 @@
-package com.xhyan.zero.boss;
+package com.xhyan.zero;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

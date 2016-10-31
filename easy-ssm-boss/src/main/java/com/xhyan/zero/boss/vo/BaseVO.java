@@ -1,5 +1,6 @@
 package com.xhyan.zero.boss.vo;
 
+import com.xhyan.zero.common.domain.BaseDomain;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -9,7 +10,7 @@ import java.util.Date;
  * 视图对象的基类对象
  */
 @Data
-public class BaseVO implements Serializable{
+public class BaseVO<T extends BaseDomain> implements Serializable{
 
 	private Long id;
 	/**
@@ -21,4 +22,5 @@ public class BaseVO implements Serializable{
 	 * 最后修改时间
 	 */
 	private Date gmtModify;
+
 }

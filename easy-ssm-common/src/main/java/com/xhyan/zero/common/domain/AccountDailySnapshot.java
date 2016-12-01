@@ -1,5 +1,6 @@
 package com.xhyan.zero.common.domain;
 
+import com.xhyan.zero.common.base.BaseDomain;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -8,7 +9,7 @@ import java.util.Date;
 
 @Data
 @Table(name = "account_daily_snapshot")
-public class AccountDailySnapshot extends BaseDomain{
+public class AccountDailySnapshot extends BaseDomain {
 	/**
 	 * 账户ID
 	 */

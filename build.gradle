@@ -39,7 +39,6 @@ subprojects {
     dependencies {
         compile this.ext.dependencies["lombok"]
 
-
 //        testCompile this.ext.dependencies["hamcrest-core"]
 //        testCompile this.ext.dependencies["mockito-core"]
 //        testCompile this.ext.dependencies["rest-assured"]

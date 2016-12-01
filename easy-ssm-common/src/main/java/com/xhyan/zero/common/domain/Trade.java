@@ -1,5 +1,6 @@
 package com.xhyan.zero.common.domain;
 
+import com.xhyan.zero.common.base.BaseDomain;
 import lombok.Data;
 
 import java.util.Date;
@@ -7,7 +8,7 @@ import javax.persistence.*;
 
 @Data
 @Table(name = "trade")
-public class Trade extends BaseDomain{
+public class Trade extends BaseDomain {
 
     /**
      * 交易名称

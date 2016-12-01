@@ -1,6 +1,8 @@
 package com.xhyan.zero.core.service;
 
+import com.xhyan.zero.common.base.BaseService;
 import com.xhyan.zero.common.domain.Account;
+import com.xhyan.zero.core.dto.AccountDTO;
 
 /**
  * 账户相关服务
@@ -8,7 +10,7 @@ import com.xhyan.zero.common.domain.Account;
  * @author yanliwei
  * @create 2016/6/2
  */
-public interface AccountService {
+public interface AccountService extends BaseService<Account>{
 
     /**
      * 获取账户信息

@@ -1,4 +1,4 @@
-package com.xhyan.zero.common.domain;
+package com.xhyan.zero.common.base;
 
 import lombok.Data;
 
@@ -12,7 +12,7 @@ import java.util.Date;
  * domain 基类
  */
 @Data
-public class BaseDomain {
+public abstract class BaseDomain extends ZeroPage {
 	/**
 	 * ID
 	 */

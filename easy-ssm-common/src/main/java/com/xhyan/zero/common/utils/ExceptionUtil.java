@@ -2,8 +2,7 @@ package com.xhyan.zero.common.utils;
 
 import com.xhyan.zero.common.config.ExceptionMsgConfig;
 import com.xhyan.zero.common.enums.ExceptionCode;
-import com.xhyan.zero.common.exception.CommonException;
-import org.aeonbits.owner.Config;
+import com.xhyan.zero.common.exception.BusinessException;
 import org.aeonbits.owner.ConfigCache;
 
 import java.text.MessageFormat;
@@ -19,13 +18,13 @@ public class ExceptionUtil {
     private static ExceptionMsgConfig msgConfig = ConfigCache.getOrCreate(ExceptionMsgConfig.class);
 
     public static void throwCommonException(ExceptionCode code) {
-        throw new CommonException(code.getCode(), msgConfig.getProperty(code
+        throw new BusinessException(code.getCode(), msgConfig.getProperty(code
                 .getCode()));
     }
 
     public static void throwCommonException(boolean condition, ExceptionCode code) {
         if (condition) {
-            throw new CommonException(code.getCode(), msgConfig.getProperty(code
+            throw new BusinessException(code.getCode(), msgConfig.getProperty(code
                     .getCode()));
         }
     }
@@ -33,7 +32,7 @@ public class ExceptionUtil {
     public static void throwCommonException(boolean condition, ExceptionCode code, Object... objects) {
         if (condition) {
             String errorMsg = MessageFormat.format(code.getCode(), objects);
-            throw new CommonException(code.getCode(), errorMsg);
+            throw new BusinessException(code.getCode(), errorMsg);
         }
 
     }

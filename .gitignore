@@ -1,0 +1,33 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+将删除 .gradle/
+将删除 .idea/
+将删除 classes/artifacts/easy-ssm-boss/
+将删除 classes/artifacts/easy-ssm-portal/
+将删除 easy-ssm-boss/build/
+将删除 easy-ssm-common/build/
+将删除 easy-ssm-core/build/
+将删除 easy-ssm-portal/build/
+将删除 easy-ssm-eureka/build/
+将删除 easy-ssm-eureka/src/test/
+/.idea/
+/classes/
+/.gradle/
+/easy-ssm-boss/build/
+/easy-ssm-common/build/
+/easy-ssm-core/build/
+/easy-ssm-eureka/build/
+/easy-ssm-portal/build/

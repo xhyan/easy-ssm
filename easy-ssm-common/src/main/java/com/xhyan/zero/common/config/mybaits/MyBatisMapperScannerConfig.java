@@ -17,7 +17,7 @@ public class MyBatisMapperScannerConfig {
     public MapperScannerConfigurer mapperScannerConfigurer() {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
-        mapperScannerConfigurer.setBasePackage("com.xhyan.zero.dao");
+        mapperScannerConfigurer.setBasePackage("com.xhyan.zero.common.mapper");
         Properties properties = new Properties();
         properties.setProperty("mappers", "com.xhyan.zero.common.utils.ZeroMapper");
         properties.setProperty("notEmpty", "false");

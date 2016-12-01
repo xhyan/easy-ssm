@@ -1,5 +1,6 @@
 package com.xhyan.zero.common.domain;
 
+import com.xhyan.zero.common.base.BaseDomain;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -7,7 +8,7 @@ import javax.persistence.Table;
 
 @Data
 @Table(name = "auth_role")
-public class AuthRole extends BaseDomain{
+public class AuthRole extends BaseDomain {
 	/**
 	 * 角色名称
 	 */

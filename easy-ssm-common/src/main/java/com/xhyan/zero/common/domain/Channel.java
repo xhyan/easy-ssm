@@ -1,5 +1,6 @@
 package com.xhyan.zero.common.domain;
 
+import com.xhyan.zero.common.base.BaseDomain;
 import lombok.Data;
 
 import javax.persistence.Column;

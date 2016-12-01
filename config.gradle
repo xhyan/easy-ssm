@@ -29,7 +29,8 @@ ext {
             'jackson-module-jsonSchema'  : 'com.fasterxml.jackson.module:jackson-module-jsonSchema:2.4.0',
             'owner'                      : 'org.aeonbits.owner:owner:1.0.9',
             'lombok'                     : 'org.projectlombok:lombok:1.16.8',
-            'flyway-core'                : 'org.flywaydb:flyway-core:4.0.3'
+            'flyway-core'                : 'org.flywaydb:flyway-core:4.0.3',
+            'dozer'                      : 'net.sf.dozer:dozer:5.4.0'
 
     ]
 
@@ -39,6 +40,11 @@ ext {
             'spring-boot-starter-web'    : 'org.springframework.boot:spring-boot-starter-web',
             'spring-boot-starter-logging': 'org.springframework.boot:spring-boot-starter-logging',
             'spring-boot-starter-test'   : 'org.springframework.boot:spring-boot-starter-test'
+    ]
+
+    cloud_starters = [
+            'spring-cloud-starter-eureka-server'  : 'org.springframework.cloud:spring-cloud-starter-eureka-server',
+            'spring-cloud-starter-eureka'  : 'org.springframework.cloud:spring-cloud-starter-eureka'
     ]
 
     plugins = [

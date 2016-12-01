@@ -10,6 +10,7 @@ public enum ExceptionCode {
 
     SYSTEM_ERROR("system.error"),
     ACCOUNT_NOT_FOUND("account.not.found"),
+    OBJECT_ATTR_COPY_ERROR("object.attr.copy.error"),
     LIST_ATTR_COPY_ERROR("list.attr.copy.error")
     ;
 

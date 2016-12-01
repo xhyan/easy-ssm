@@ -6,17 +6,17 @@ package com.xhyan.zero.common.exception;
  * @author yanliwei
  * @create 2016/6/4
  */
-public class CommonException extends BaseZeroException {
+public class BusinessException extends BaseZeroException {
 
-    public CommonException(Throwable cause) {
+    public BusinessException(Throwable cause) {
         super(cause);
     }
 
-    public CommonException(String errorMsg) {
+    public BusinessException(String errorMsg) {
         super(errorMsg);
     }
 
-    public CommonException(String errorCode, String errorMsg) {
+    public BusinessException(String errorCode, String errorMsg) {
         super(errorCode, errorMsg);
     }
 }

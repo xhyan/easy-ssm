@@ -21,7 +21,6 @@ datasource:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
-
 #数据源配置
 flyway:
     baseline-description: zero
@@ -34,7 +33,7 @@ flyway:
     ignore-failed-future-migration: false
 #    init-sqls:
     locations: classpath:resources/db/sql/
-    out-of-order:
+    out-of-order: false
     password: 1234
 #    placeholder-prefix:
 #    placeholder-replacement:
@@ -48,3 +47,18 @@ flyway:
     url: jdbc:mysql://localhost:3306/pay?useUnicode=true&amp;characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
     user: root
     validate-on-migrate: true
+#eureka client配置
+spring:
+  application:
+    name: easy-ssm-core
+#指定服务端口
+server:
+  port: 2222
+#指定服务中心位置
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: false
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/

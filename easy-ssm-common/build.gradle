@@ -1,16 +1,12 @@
 group 'com.xhyan'
 version '1.0-SNAPSHOT'
 
-//配置插件仓库
-//plugins {
-//    id "org.flywaydb.flyway" version "4.0.3"
-//}
-
 configurations {
     mybatisGenerator
 }
 
 dependencies {
+    runtime rootProject.ext.dependencies["dozer"]
     runtime rootProject.ext.dependencies["mysql-connector-java"]
     compile rootProject.ext.starters["spring-boot-starter"]
     //数据库连接池
@@ -18,23 +14,13 @@ dependencies {
     //mybatis相关依赖
     compile rootProject.ext.dependencies["mybatis"]
     compile rootProject.ext.dependencies["mybatis-spring"]
-    //shiro 权限控制依赖
-//    compile rootProject.ext.dependencies["shiro-spring"]
-//    compile rootProject.ext.dependencies["shiro-web"]
     //mySql数据库连接
     compile rootProject.ext.dependencies["mysql-connector-java"]
     //通用mapper工具
     compile rootProject.ext.dependencies["mapper"]
     //数据库分页插件
     compile rootProject.ext.dependencies["pagehelper"]
-    //spring相关依赖
-//    compile rootProject.ext.dependencies["spring-orm"]
-//    compile rootProject.ext.dependencies["spring-context-support"]
-    //aop
-//    compile rootProject.ext.dependencies["aspectjweaver"]
-//    compile rootProject.ext.dependencies["mail"]
-//    compile rootProject.ext.dependencies["slf4j-log4j12"]
-    compile rootProject.ext.dependencies["flyway-core"]
+
     //配置文件工具
     compile rootProject.ext.dependencies["owner"]
     compile rootProject.ext.starters["spring-boot-starter-jdbc"]

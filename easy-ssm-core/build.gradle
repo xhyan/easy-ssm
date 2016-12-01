@@ -1,13 +1,21 @@
 group 'com.xhyan'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
-apply plugin: 'war'
+jar{
+    baseName = 'easy-ssm-core'
+    version = '0.0.1-SNAPSHOT'
+}
+
 
 dependencies {
     //依赖common依赖
     compile project(':easy-ssm-common')
-    //springMVC
-    compile rootProject.ext.dependencies["spring-webmvc"]
-    providedCompile rootProject.ext.dependencies["javax.servlet-api"]
+//    compile rootProject.ext.dependencies['flyway-core']
+    compile rootProject.ext.cloud_starters['spring-cloud-starter-eureka']
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Camden.SR1'
+    }
 }
